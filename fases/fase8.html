@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fase 8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/styles.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=change_history" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_box_outline_blank" />
+</head>
+<body>
+    <a href="" class="faseNumber">
+        <img src="../assets/img/faseNunber.png" alt="">
+        <h1>.08</h1>
+    </a>
+    <h1 class="question">
+        Clique no circulo?
+    </h1>
+    <div class="answersContainer">
+        <img class="circulo8" src="../assets/img/faseNunber.png">
+    </div>
+    <a id="nao8" href="../erro.html">
+        <h1 class="nao8">
+            
+        </h1>
+    </a>
+    <div class="fase8container">
+        <h1 class="cuidado8">
+            
+        </h1>
+        <h1 class="contador8">
+            50
+        </h1>
+    </div>
+    <style>
+        .circulo8 {
+            position: fixed;
+        }
+        #nao8 {
+            align-self: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: black;
+        }
+        .nao8 {
+            align-self: center;
+            margin-top: 70px;
+        }
+        .fase8container {
+            margin-top: 250px;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <div class="direitosContainer">
+        <h3>Todos Direitos Reservados © Alunos Sesi 2024 </h3>
+    </div>
+    <script>
+        const circulo8 = document.querySelector('.circulo8');
+        const contador8 = document.querySelector('.contador8');
+        const cuidado8 = document.querySelector('.cuidado8');
+        const nao8 = document.querySelector('.nao8');
+        var clique = 50;
+
+        circulo8.addEventListener('click', () => {
+            clique--;
+            contador8.textContent = clique;
+            if(clique == 38){
+                nao8.textContent = 'NÃO CLIQUE!'
+                circulo8.style.left = '300px'
+            } if(clique == 10){
+                cuidado8.textContent = 'Cuidado!'
+            } if(clique == 5){
+                circulo8.style.left = '0px'
+                circulo8.style.right = '300px'
+            } if (clique === 0) {
+            window.location.href = 'fase9.html'; // Redireciona para a página
+            }
+        });
+    </script>
+</body>
+<script src='/assets/js/main.js'></script>
+</html>
